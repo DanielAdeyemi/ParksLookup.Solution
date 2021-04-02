@@ -16,8 +16,9 @@
 ##### ***This is a custom API to lookup national and local parks by name, location etc .***
 <hr>
 
-## <div align="center"> 🛸 API Documentation
-<!-- <details> -->
+
+<details>
+<summary> <h3>🛸 API Documentation</h3></summary>
 
 *In order to explore the endpoints of this API, we suggest that you use [Postman](https://www.postman.com/). Postman will allow you to make GET, POST, PUT, and DELETE requests with the `ParksLookupApi`.*
 Base URL: `http://localhost:5000`  
@@ -49,13 +50,41 @@ http://localhost:5000/api/parks/?location=portland%2C%20or&local=true
 #### **Sample JSON Response:**
 ```
 [
-    {
-        "parkId": 1,
-        "parkName": "Buike",
-        "parkLocation": "Portland, OR",
-        "national": false,
-        "local": true
-    }
+  {
+    "parkId": 1,
+    "parkName": "Buike",
+    "parkLocation": "Portland, OR",
+    "national": false,
+    "local": true
+  }
 ]
 ```
-<!-- </details> -->
+</details>
+
+
+## 🛠️ *Technologies used:*
+* C# 9
+* .NET Core v5.0
+* RESTful Routing, CRUD 
+* MySQL MySQL Workbench
+* Entity Framework Core
+* Postman
+* Git and GitHub
+
+## 🐛 *Known bugs:*
+No bugs as of 4/2/2021
+
+## 🌟 *Improvement opportunities:*
+* build views
+* add more features(such as login etc) to make it more useful in real world.
+
+
+## 📬 Contact Information
+#### For any questions *[email author](mailto:adeyemidany+github@gmail.com?subject=[GitHubAPI])*
+
+
+
+## 📘 *License and copyright:*
+
+> ***© Daniel Adeyemi, 2021***  
+> ⚖️ *[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)*
