@@ -20,13 +20,13 @@ namespace ParksLookup.Controllers
 
     // GET api/parks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string ParkName)
     {
       var query = _db.Parks.AsQueryable();
-      // if(ParkId != 0)
-      // {
-      //   query = query.Where(park => park.ParkId == ParkId);
-      // }
+      if(ParkName != null)
+      {
+        query = query.Where(park => park.ParkName == ParkName);
+      }
       return await query.ToListAsync();
     }
 
