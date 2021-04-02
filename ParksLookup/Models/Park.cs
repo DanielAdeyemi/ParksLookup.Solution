@@ -10,5 +10,9 @@ namespace ParksLookup.Models
     public string ParkName { get; set; }
     [Required]
     public string ParkLocation { get; set; }
+    [Required]
+    public bool National { get; set; }
+    [Required]
+    public bool Local { get; set; }
   }
 }
