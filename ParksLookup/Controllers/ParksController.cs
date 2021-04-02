@@ -23,7 +23,23 @@ namespace ParksLookup.Controllers
     public async Task<ActionResult<IEnumerable<Park>>> Get()
     {
       var query = _db.Parks.AsQueryable();
+      // if(ParkId != 0)
+      // {
+      //   query = query.Where(park => park.ParkId == ParkId);
+      // }
       return await query.ToListAsync();
+    }
+
+    // GET: api/parks/1
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Park>> GetPark(int id)
+    {
+      var park = await _db.Parks.FindAsync(id);
+      if(park == null)
+      {
+        return NotFound();
+      }
+      return park;
     }
   }
 }
