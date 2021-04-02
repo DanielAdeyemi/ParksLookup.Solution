@@ -20,7 +20,7 @@ namespace ParksLookup.Controllers
 
     // GET api/parks, api/parks/?location=portland%2C%20or
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get(string ParkName, string Location)
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string ParkName, string Location, bool National, bool Local)
     {
       var query = _db.Parks.AsQueryable();
       if(ParkName != null)
@@ -30,6 +30,14 @@ namespace ParksLookup.Controllers
       if(Location != null)
       {
         query = query.Where(park => park.ParkLocation == Location);
+      }
+      if(National)
+      {
+        query = query.Where(park => park.National == true);
+      }
+      if(Local)
+      {
+        query = query.Where(park => park.Local == true);
       }
       return await query.ToListAsync();
     }
