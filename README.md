@@ -29,5 +29,21 @@ POST /api/parks
 PUT /api/parks/{id}
 DELETE /api/parks/{id}
 ```
+#### **Path Parameters:**   
+| Parameter | Type | Default | Required | Description |
+| :---: | :---: | :---: | :---: | --- |
+| ParkName | string | none | false| Return matches by name.
+| Location | string | none | false | Return matches by location (check note below for comma separated locations such `Portland, OR`). 
+| National | bool | none | false | Return all parks marked as **National** |
+| Local | bool | none | false | Return all parks marked as **Local** |
 
+*⚠️ Note: for comma-separated locations, such `Portland, OR` use following path:*   
+```
+?location=portland%2C%20or
+```
+
+#### Example Query
+```
+https://localhost:5000/api/parks/?location=portland%2C%20or&local=true
+```
 <!-- </details> -->
