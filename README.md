@@ -42,8 +42,20 @@ DELETE /api/parks/{id}
 ?location=portland%2C%20or
 ```
 
-#### Example Query
+#### **Example Query:**
 ```
-https://localhost:5000/api/parks/?location=portland%2C%20or&local=true
+http://localhost:5000/api/parks/?location=portland%2C%20or&local=true
+```
+#### **Sample JSON Response:**
+```
+[
+    {
+        "parkId": 1,
+        "parkName": "Buike",
+        "parkLocation": "Portland, OR",
+        "national": false,
+        "local": true
+    }
+]
 ```
 <!-- </details> -->
