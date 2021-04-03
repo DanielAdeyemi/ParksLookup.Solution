@@ -8,7 +8,8 @@
 <img alt="MySQL" width="30px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" /> 
 <div align="center">
 
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/DanielAdeyemi/ParksLookup.Solution/main?color=purple&style=for-the-badge)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/DanielAdeyemi/ParksLookup.Solution/main?color=purple&style=for-the-badge) 
+![GitHub language count](https://img.shields.io/github/languages/count/DanielAdeyemi/ParksLookup.Solution?color=purple&style=for-the-badge) ![Languages](https://img.shields.io/github/languages/top/DanielAdeyemi/ParksLookup.Solution?color=purple&style=for-the-badge)
 </p>
 
 <img src="https://cdn.cheapism.com/images/National_Park_Photos.2e16d0ba.fill-1440x605.png" alt="Lake view"/>
