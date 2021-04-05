@@ -15,7 +15,7 @@
 
 ##  🚩 *Description:*  
 
-#### ***This is a custom API to lookup national and local parks by name, location etc .***
+#### ***This is a custom API (version 1.0) to lookup national and local parks by name, location etc .***
 <hr>
 <details>
 <summary> <h3>🔧 Setup & Requirements</h3></summary>
@@ -117,6 +117,12 @@ http://localhost:5000/api/parks/?location=portland%2C%20or&local=true
   }
 ]
 ```
+#### **Versions:**
+This is version 1.0 of ParksLookup API. You don't have to change query to have response - it was setup to assume default version as 1.0 in `Startup.cs` file. For any later versions check table below:
+| Version |  Default | Description |
+| :---: | :---: | :---: | 
+| 1.0 | true | looks for parks by name, locations, national/state affilation. | 
+
 </details>
 
 
@@ -126,6 +132,7 @@ http://localhost:5000/api/parks/?location=portland%2C%20or&local=true
 * RESTful Routing, CRUD 
 * MySQL MySQL Workbench
 * Entity Framework Core
+* MVC.Versioning 5.0.0
 * Postman
 * Git and GitHub
 
