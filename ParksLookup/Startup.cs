@@ -23,6 +23,7 @@ namespace ParksLookup
 			services.AddDbContext<ParksLookupContext>(opt =>
 				opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 				services.AddControllers();
+				services.AddApiVersioning();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
