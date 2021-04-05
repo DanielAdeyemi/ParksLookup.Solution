@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using ParksLookup.Models;
 
 namespace ParksLookup
@@ -30,6 +31,7 @@ namespace ParksLookup
 						opt.DefaultApiVersion = new ApiVersion(1, 0);
 						opt.AssumeDefaultVersionWhenUnspecified = true;
 						opt.ReportApiVersions = true;
+						opt.ApiVersionReader = new QueryStringApiVersionReader("v");
 					});
 		}
 

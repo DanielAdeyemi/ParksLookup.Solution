@@ -122,7 +122,7 @@ Version 1.0 of ParksLookup API was setup as default version in `Startup.cs` file
 | Version |  Default | Description | query |
 | :---: | :---: | :---: | :---: |
 | 1.0 | true | looks for parks by name, locations, national/state affilation. | http://localhost:5000/api/parks/
-| 1.1 | false | get route will display only national parks by default | http://localhost:5000/api/parks/?api-version=1.1
+| 1.1 | false | get route will display only national parks by default | http://localhost:5000/api/parks/?v=1.1
 
 </details>
 
