@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using ParksLookup.Models;
 
 namespace ParksLookup
@@ -23,7 +24,13 @@ namespace ParksLookup
 			services.AddDbContext<ParksLookupContext>(opt =>
 				opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 				services.AddControllers();
-				services.AddApiVersioning();
+				services.AddApiVersioning(
+					opt =>
+					{
+						opt.DefaultApiVersion = new ApiVersion(1, 0);
+						opt.AssumeDefaultVersionWhenUnspecified = true;
+						opt.ReportApiVersions = true;
+					});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
