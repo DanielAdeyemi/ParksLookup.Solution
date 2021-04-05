@@ -8,6 +8,8 @@ using ParksLookup.Models;
 namespace ParksLookup.Controllers
 {
   [Route("api/[controller]")]
+  [ApiVersion("1.0")]
+  [ApiVersion("1.1")]
   [ApiController]
   public class ParksController : ControllerBase
   {
@@ -15,6 +17,14 @@ namespace ParksLookup.Controllers
     public ParksController(ParksLookupContext db)
     {
       _db = db;
+    }
+
+    [HttpGet]
+    [MapToApiVersion("1.1")]
+    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    {
+      var query = _db.Parks.AsQueryable().Where(park=> park.National == true);
+      return await query.ToListAsync();
     }
 
     // GET api/parks, api/parks/?location=portland%2C%20or
