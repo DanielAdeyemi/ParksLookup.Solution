@@ -73,7 +73,10 @@
  - Next, run `dotnet ef database update` to generate the database. You can confirm the database was created by checking MySQL workbench.
 
 *⚠️ Note: to make changed to the database you can run `dotnet ef migrations add <MigrationName>`*
+
+
 </details>
+<a name="api></a>
 
 <details>
 <summary> <h3>🛸 API Documentation</h3></summary>
@@ -137,6 +140,9 @@ Version 1.0 of ParksLookup API was setup as default version in `Startup.cs` file
 * Postman
 * Git and GitHub
 
+## 🖥️ View the project:    
+To view functionality you need to run `dotnet run` command from ParksLookup folder. After that you will see http://localhost:5000 and can need to open Postman and enter the API queries described above (see [API Documentation](#api) for more details)
+
 ## 🐛 *Known bugs:*
 No bugs as of 4/2/2021
 
@@ -144,10 +150,8 @@ No bugs as of 4/2/2021
 * build views
 * add more features(such as login etc) to make it more useful in real world.
 
-
 ## 📬 Contact Information
 #### For any questions *[email author](mailto:adeyemidany+github@gmail.com?subject=[GitHubAPI])*
-
 
 
 ## 📘 *License and copyright:*
